@@ -9,7 +9,7 @@ public class RadixSort <T extends Comparable <T>> implements IGenericSort<T> {  
     
     }
 
-    public T[] radixsort(T arr[], int n) {
+    private T[] radixsort(T arr[], int n) {
         // Encuentra el número máximo para conocer el número de dígitos
         T mx = arr[0];
         for (int i = 1; i < n; i++) {
