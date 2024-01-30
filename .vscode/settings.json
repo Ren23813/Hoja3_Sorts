@@ -1,0 +1,22 @@
+{
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-21",
+            "path": "c:\\Users\\belen\\Downloads\\graalvm-jdk-21.0.2+13.1"
+        },
+        {
+            "name": "JavaSE-11",
+            "path": "c:\\Users\\belen\\Downloads\\graalvm-ce-java11-22.3.3"
+        }
+    ],
+    "graalvm.home": "c:\\Users\\belen\\Downloads\\graalvm-ce-java11-22.3.3",
+    "graalvm.installations": [
+        "c:\\Users\\belen\\Downloads\\graalvm-jdk-21.0.2+13.1",
+        "c:\\Users\\belen\\Downloads\\graalvm-ce-java11-22.3.3"
+    ],
+    "terminal.integrated.env.windows": {
+        "GRAALVM_HOME": "c:\\Users\\belen\\Downloads\\graalvm-ce-java11-22.3.3",
+        "JAVA_HOME": "c:\\Users\\belen\\Downloads\\graalvm-ce-java11-22.3.3",
+        "PATH": "c:\\Users\\belen\\Downloads\\graalvm-ce-java11-22.3.3\\bin;${env:PATH}"
+    }
+}

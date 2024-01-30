@@ -2,6 +2,8 @@ package sorts;
 
 public class CocktailSort<T extends Comparable<T>> implements IGenericSort<T> {
 
+    // Para la lógica de QuickSort se utilizó como referencia a GeeksforGeeks
+
     /**
      * @param arr
      * @return T[]
