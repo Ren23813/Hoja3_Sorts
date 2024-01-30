@@ -2,7 +2,8 @@ package sorts;
 
 public class Main <T> {
     public static void main(String[] args) {
-        //Generador.generarRandoms("numeros_random.txt");       //Fue el código que se utilizó para generar los 3000 números random
+    Generador.generarRandoms("numeros_random.txt");       //Fue el código que se utilizó para generar los 3000 números random
+    Integer[] randomNums = Generador.loadNumsDesdeArchivo("numeros_random.txt");;
 
     Main <Integer>main = new Main<>();
     RadixSort <Integer>radixSort = new RadixSort<>();
@@ -11,16 +12,16 @@ public class Main <T> {
     QuickSort <Integer>quickSort = new QuickSort<>();
     CocktailSort <Integer>cocktailSort = new CocktailSort<>();
 
-    Integer[] ordenado = {11,9,6,4444,55555,333,999999999,0};
-    main.print(radixSort.sort(ordenado));
+    //Integer[] ordenado = {11,9,6,4444,55555,333,999999999,0};
+    main.print(radixSort.sort(randomNums));
     System.out.println("");
-    main.print(gnomeSort.sort(ordenado));
+    main.print(gnomeSort.sort(randomNums));
     System.out.println("");
-    main.print(mergeSort.sort(ordenado));
+    main.print(mergeSort.sort(randomNums));
     System.err.println("");
-    main.print(quickSort.sort(ordenado));
+    main.print(quickSort.sort(randomNums));
     System.err.println("");
-    main.print(cocktailSort.sort(ordenado));
+    main.print(cocktailSort.sort(randomNums));
     }
 
     void print(T arr[]) {
