@@ -30,18 +30,18 @@ public class Generador {
         }
     }
 
-    public static Integer[] loadNumsDesdeArchivo(String nombreArchivo) {
+    public static Integer[] loadNumsDesdeArchivo(String nombreArchivo, List<Integer> existingList) {
         List<Integer> numeros = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(nombreArchivo)))) {
             String line;
 
             while ((line = reader.readLine()) != null) {
-                numeros.add(Integer.parseInt(line.trim()));
+                existingList.add(Integer.parseInt(line.trim()));
             }
 
         } catch (IOException e) {
             System.err.println("Se produjo error al intentar leer el archivo: " + e.getMessage());
         }
-        return numeros.toArray(new Integer[0]);
+        return existingList.toArray(new Integer[0]);
     }
 }
