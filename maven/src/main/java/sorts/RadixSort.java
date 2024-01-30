@@ -1,12 +1,20 @@
 package sorts;
+
 import java.util.*;
-public class RadixSort <T extends Comparable <T>> implements IGenericSort<T> {    //Obtenido de GeeksforGeeks
+
+public class RadixSort<T extends Comparable<T>> implements IGenericSort<T> {
+
+    /**
+     * @param arr
+     * @return T[]
+     */
+    // Obtenido de GeeksforGeeks
 
     @Override
     public T[] sort(T[] arr) {
         int n = arr.length;
         return radixsort(arr, n);
-    
+
     }
 
     private T[] radixsort(T arr[], int n) {
@@ -18,7 +26,7 @@ public class RadixSort <T extends Comparable <T>> implements IGenericSort<T> {  
             }
         }
 
-        // Ordenamiento 
+        // Ordenamiento
         for (int exp = 1; (int) mx / exp > 0; exp *= 10) {
             ArrayList<T> output = new ArrayList<>(Collections.nCopies(n, null));
             int i;
@@ -49,5 +57,4 @@ public class RadixSort <T extends Comparable <T>> implements IGenericSort<T> {  
         return arr;
     }
 
-    
 }
