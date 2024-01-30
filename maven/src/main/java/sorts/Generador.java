@@ -30,13 +30,17 @@ public class Generador {
         }
     }
 
-    public static Integer[] loadNumsDesdeArchivo(String nombreArchivo, List<Integer> existingList) {
-        List<Integer> numeros = new ArrayList<>();
+    public static Integer[] loadNumsDesdeArchivo(String nombreArchivo, List<Integer> existingList,
+            int numberOfElements) {
+
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(nombreArchivo)))) {
             String line;
 
-            while ((line = reader.readLine()) != null) {
+            int count = 0;
+
+            while ((line = reader.readLine()) != null && count < numberOfElements) {
                 existingList.add(Integer.parseInt(line.trim()));
+                count++;
             }
 
         } catch (IOException e) {
