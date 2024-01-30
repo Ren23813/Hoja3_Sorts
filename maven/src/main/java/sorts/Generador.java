@@ -17,7 +17,7 @@ public class Generador {
         Random random = new Random();
         try (BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(nombreArchivo)))) {
             for (int i = 0; i < 3000; i++) {
-                int randNum = random.nextInt(); 
+                int randNum = random.nextInt(Integer.MAX_VALUE); 
                 writer.write(Integer.toString(randNum)); 
                 writer.newLine(); 
             }

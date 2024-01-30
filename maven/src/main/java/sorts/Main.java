@@ -12,15 +12,17 @@ public class Main <T> {
     QuickSort <Integer>quickSort = new QuickSort<>();
     CocktailSort <Integer>cocktailSort = new CocktailSort<>();
 
+    System.out.println("----------------------------------- SORT NUMBERS ----------------------------------- ");
     //Integer[] ordenado = {11,9,6,4444,55555,333,999999999,0};
-    main.print(radixSort.sort(randomNums));
-    System.out.println("");
+    System.out.println("\n\n    RADIX SORT:");
+    main.print(radixSort.sort(randomNums)); 
+    System.out.println("\n\n    GNOME SORT:");
     main.print(gnomeSort.sort(randomNums));
-    System.out.println("");
+    System.out.println("\n\n    MERGE SORT:");
     main.print(mergeSort.sort(randomNums));
-    System.err.println("");
+    System.out.println("\n\n    QUICK SORT:");
     main.print(quickSort.sort(randomNums));
-    System.err.println("");
+    System.out.println("\n\n    COCKTAIL SORT:");
     main.print(cocktailSort.sort(randomNums));
     }
 
