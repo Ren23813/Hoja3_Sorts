@@ -1,13 +1,17 @@
 package sorts;
 
-public class CocktailSort <T extends Comparable<T>> implements IGenericSort<T>{
+public class CocktailSort<T extends Comparable<T>> implements IGenericSort<T> {
 
+    /**
+     * @param arr
+     * @return T[]
+     */
     @Override
     public T[] sort(T[] arr) {
         int n = arr.length;
-         cocktailSort(arr);
+        cocktailSort(arr);
         return arr;
-    } 
+    }
 
     private void cocktailSort(T[] a) {
         boolean swapped = true;
@@ -53,7 +57,5 @@ public class CocktailSort <T extends Comparable<T>> implements IGenericSort<T>{
             System.out.print(a[i] + " ");
         System.out.println();
     }
-    
 
-    
 }
