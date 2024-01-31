@@ -11,9 +11,10 @@ public class Main<T> {
     public static void main(String[] args) {
 
         List<Integer> existingList = new ArrayList<>();
-        Generador.loadNumsDesdeArchivo("numeros_random.txt", existingList); // Fue el código que se utilizó para generar
-                                                                            // los 3000 números
-                                                                            // random
+        Generador.loadNumsDesdeArchivo("numeros_random.txt", existingList, 3000); // Fue el código que se utilizó para
+                                                                                  // generar
+        // los 3000 números
+        // random
 
         Main<Integer> main = new Main<>();
         RadixSort<Integer> radixSort = new RadixSort<>();
