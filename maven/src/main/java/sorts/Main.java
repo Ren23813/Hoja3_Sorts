@@ -35,6 +35,9 @@ public class Main<T> {
         main.print(quickSort.sort(existingList.toArray(new Integer[0])));
         System.out.println("\n\n    COCKTAIL SORT:");
         main.print(cocktailSort.sort(existingList.toArray(new Integer[0])));
+
+        //Generador.writeOrdenados(radixSort.sort(existingList.toArray(new Integer [0])), "numeros_ordenados.txt");
+                //Se llamó a función para ordenar los datos y crear asi la lista ordenada, para su posterior analisis. 
     }
 
     void print(T arr[]) {
