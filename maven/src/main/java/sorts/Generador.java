@@ -48,4 +48,16 @@ public class Generador {
         }
         return existingList.toArray(new Integer[0]);
     }
+    
+    public static void writeOrdenados(Integer lista [], String nombreArchivo){
+        try (BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(nombreArchivo)))) {
+            for (int i = 0; i < lista.length; i++) {
+                writer.write(Integer.toString(lista[i]));
+                writer.newLine();
+            }
+            System.out.println("Se han guardado los números ordenados en el archivo: " + nombreArchivo);
+        } catch (IOException e) {
+            System.err.println("Error al escribir el archivo: " + e.getMessage());
+        }
+    }
 }
